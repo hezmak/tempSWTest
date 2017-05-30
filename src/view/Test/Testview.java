@@ -70,10 +70,11 @@ public class Testview extends GuiTest {
         String file1 = "firstfile.txt";
         String file2 = "secondfile.txt";
 
+        System.out.println("왼쪽 파일을 선택한다");
         assertTrue(GuiTest.find("#btnLeftFileEdit").isDisable());
         assertTrue(GuiTest.find("#btnLeftFileSave").isDisable());
         assertTrue(GuiTest.find("#btnRightFileEdit").isDisable());
-        assertTrue(GuiTest.find("#btnRightFileOpen").isDisable());
+        assertTrue(GuiTest.find("#btnRightFileSave").isDisable());
 
         click("#btnLeftFileOpen");
 
@@ -83,6 +84,7 @@ public class Testview extends GuiTest {
         type(file1).type(KeyCode.ENTER);
         //assertTrue(((TextField)GuiTest.find("#fieldLeftFile")).getText().equals("filename1"));
 
+        System.out.println("오른쪽 파일을 선택한다");
 
 
         //click("#cancel_button");
